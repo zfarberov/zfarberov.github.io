@@ -95,7 +95,7 @@ df_inter2 = pd.json_normalize(df_resolve)
 df_inter2
 ```
 The result is:
-![FlattenESGScores.gif](https://zfarberov.github.io/ESGBulkAsCSV/FlattenESGScores.gif)
+![ESGSymbologySEDOLNormalize.gif](https://zfarberov.github.io/ESGBulkAsCSV/ESGSymbologySEDOLNormalize.gif)
 Which is not what we are looking for, yet
 
 ### Normalize Nested
