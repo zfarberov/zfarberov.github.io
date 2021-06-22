@@ -137,10 +137,10 @@ df_final
 
 ## References
 This article's code:
-https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV
+* https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV
 
-https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-cfs-api-user-guide
-https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-scores-user-guide
-https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-symbology-guide
-https://developers.refinitiv.com/en/article-catalog/article/how-to-identify-and-request-esg-bulk-content---python
-https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10
+* https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-cfs-api-user-guide
+* https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-scores-user-guide
+* https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-symbology-guide
+* https://developers.refinitiv.com/en/article-catalog/article/how-to-identify-and-request-esg-bulk-content---python
+* https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10
