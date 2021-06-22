@@ -109,6 +109,10 @@ df_accum
 ```
 This takes a significant chunk of time to process
 
+But at the end the result is:
+![ESGSymbologySEDOLNormalizeNested.gif](https://zfarberov.github.io/ESGBulkAsCSV/ESGSymbologySEDOLNormalizeNested.gif)
+Which is flattened, and what we are looking for, all the remains to do is
+
 ### Merge Columns
 Merging previously normalized columns and newly created columns originating from flattened AllQuotes
 
@@ -118,11 +122,13 @@ df_fin
 ```
 
 ### Delete Nested AllQuotes Column
+That we do not need anymore, as the content of it are now fully flattened
 ```
 df_final = df_fin.drop('AllQuotes', 1)
 ```
 
-### Saved Flattened To CSV File
+### Save Flattened To CSV File
+And now we are ready to save the flattened output to a file
 ```
 resultspth = filedestinationpath + fileNameRoot + '.csv'
 df_final.to_csv(resultspth, index = False)
