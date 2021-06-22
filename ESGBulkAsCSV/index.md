@@ -46,6 +46,7 @@ Resulting in
 Symbology SEDOL carries multiple Quotes as nexted objects, this takes longer to process..
 
 ### Define flatten_json
+
 We will be using code https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10
 
 Rather then https://pypi.org/project/flatten-json/
@@ -75,5 +76,32 @@ def flatten_json(nested_json, exclude=['']):
 
     flatten(nested_json)
     return out
+```
+### Normalize All
+
+```
+fileNameRoot = 'RFT-ESG-Symbology-SEDOL-Delta-2021-05-13'
+#convert specific json to csv
+filedestinationpath = '.\\'
+filename = filedestinationpath + fileNameRoot + '.jsonl.gz'
+f=gzip.open(filename,'rb')
+file_content=f.read()
+lines = file_content.splitlines()
+df_inter = pd.DataFrame(lines)
+df_inter.columns = ['json_element']
+df_resolve = df_inter['json_element'].apply(json.loads)
+df_resolve
+df_inter2 = pd.json_normalize(df_resolve)
+df_inter2
+```
+
+### Normalize Nested
+By iterating rows and flattenting AllQuotes column that contains nested lists - this takes longer...
+
+```
+df_accum = pd.DataFrame() 
+for i in range(0,df_inter2['AllQuotes'].size):
+    df_accum = df_accum.append(pd.json_normalize(flatten_json(df_inter2['AllQuotes'][i])))
+df_accum
 ```
 
