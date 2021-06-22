@@ -94,6 +94,9 @@ df_resolve
 df_inter2 = pd.json_normalize(df_resolve)
 df_inter2
 ```
+The result is:
+![FlattenESGScores.gif](https://zfarberov.github.io/ESGBulkAsCSV/FlattenESGScores.gif)
+Which is not what we are looking for, yet
 
 ### Normalize Nested
 By iterating rows and flattenting AllQuotes column that contains nested lists - this takes longer...
