@@ -104,4 +104,24 @@ for i in range(0,df_inter2['AllQuotes'].size):
     df_accum = df_accum.append(pd.json_normalize(flatten_json(df_inter2['AllQuotes'][i])))
 df_accum
 ```
+This takes a significant chunk of time to process
 
+### Merge Columns
+Merging previously normalized columns and newly created columns originating from flattened AllQuotes
+
+```
+df_fin = df_inter2.merge(df_accum, left_index=True, right_index=True)
+df_fin
+```
+
+### Delete Nested AllQuotes Column
+```
+df_final = df_fin.drop('AllQuotes', 1)
+```
+
+### Saved Flattened To CSV File
+```
+resultspth = filedestinationpath + fileNameRoot + '.csv'
+df_final.to_csv(resultspth, index = False)
+df_final
+```
