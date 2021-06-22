@@ -127,10 +127,20 @@ That we do not need anymore, as the content of it are now fully flattened
 df_final = df_fin.drop('AllQuotes', 1)
 ```
 
-### Save Flattened To CSV File
+### Save Flattened DataFrame Result To CSV File
 And now we are ready to save the flattened output to a file
 ```
 resultspth = filedestinationpath + fileNameRoot + '.csv'
 df_final.to_csv(resultspth, index = False)
 df_final
 ```
+
+## References
+This article's code:
+https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV
+
+https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-cfs-api-user-guide
+https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-scores-user-guide
+https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-symbology-guide
+https://developers.refinitiv.com/en/article-catalog/article/how-to-identify-and-request-esg-bulk-content---python
+https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10
