@@ -40,7 +40,7 @@ df_final.to_csv(resultspth, index = False)
 df_final
 ```
 Resulting in
-![alt text](https://github.com/zfarberov/zfarberov.github.io/tree/main/ESGBulkAsCSV/)
+![FlattenESGScores.gif](https://github.com/zfarberov/zfarberov.github.io/tree/main/ESGBulkAsCSV/FlattenESGScores.gif)
 ## Flatten ESG Symbology SEDOL
 
 Symbology SEDOL carries multiple Quotes as nexted objects, this takes longer to process..
