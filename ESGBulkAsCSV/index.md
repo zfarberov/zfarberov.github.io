@@ -136,9 +136,8 @@ df_final
 ```
 
 ## References
-This article's code:
-* https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV
-
+  
+* This article's code: https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV
 * https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-cfs-api-user-guide
 * https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-scores-user-guide
 * https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-symbology-guide
