@@ -137,9 +137,9 @@ df_final
 
 ## References
   
-* This article's code: [https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV)
-* [https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-cfs-api-user-guide](ESG Bulk CFS API User Guide)
-* [https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-scores-user-guide](ESG Bulk Scores User Guide)
-* [https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-symbology-guide](ESG Bulk Symbology Guide)
-* [https://developers.refinitiv.com/en/article-catalog/article/how-to-identify-and-request-esg-bulk-content---python](How to Identify and Request ESG Bulk Content - Python)
-* [https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10](Falttenting JSON Objects in Python)
+* [This article's code](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.ESGBulkToCSV)
+* [ESG Bulk CFS API User Guide](https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-cfs-api-user-guide])
+* [ESG Bulk Scores User Guide](https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-scores-user-guide)
+* [ESG Bulk Symbology Guide](https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-apis/documentation#esg-bulk-symbology-guide)
+* [How to Identify and Request ESG Bulk Content - Python](https://developers.refinitiv.com/en/article-catalog/article/how-to-identify-and-request-esg-bulk-content---python)
+* [Falttenting JSON Objects in Python](https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10)
