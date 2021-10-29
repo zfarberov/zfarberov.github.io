@@ -49,14 +49,14 @@ jResp = json.loads(txt);
 print(json.dumps(jResp, indent=2));
 ```
 Resulting in output:
-![https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/TopNewsHierarchy.gif](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/TopNewsHierarchy.gif)
+![TopNewsHierarchy.gif](https://zfarberov.github.io/RDPNewsImages/TopNewsHierarchy.gif)
 
 ### Request Top News Item Per Package Id
 From this available hierarchy, we select the news package of interest to us, for example, Main -> World News:
 ```
 myTopNewsId = jResp['data'][0].get('pages')[3].get('topNewsId')
 ```
-![https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/packageId.gif](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/packageId.gif)
+![packageId.gif](https://zfarberov.github.io/RDPNewsImages/packageId.gif)
 ## References
 
 * The code examples referenced in this article:  
