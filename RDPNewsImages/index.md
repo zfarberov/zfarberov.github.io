@@ -21,7 +21,7 @@ These steps are included in the companion code examples hosted on GitHub (see li
 
 ## References
 
-* This article's companion code:  
+* The code examples referenced in this article:  
 [https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages)
 [https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsOnlineReportsImages](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsOnlineReportsImages)
 * RDP News API User and Design Guide: 
