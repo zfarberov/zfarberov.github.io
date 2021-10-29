@@ -19,7 +19,10 @@ To interact with RDP platform we require valid RDP credentials and setup:
 3. Authenticate with RDP using credentials to obtain a valid token
 These steps are included in the companion code examples hosted on GitHub (see References section) and are described in detail in many RDP articles, for example [https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python](https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python), therefore, we ommit the detailed discussion of these steps here and next next we focus on requesting RDP images.
 
-## Request Top News (Hierarchy)
+## Request RDP Images
+Let us first look at requesting  images that are made available with Top News
+
+### Request Top News Hierarchy
 ```
 def getTopNews():
     news_category_URL = "/data/news"
@@ -48,6 +51,12 @@ print(json.dumps(jResp, indent=2));
 Resulting in output:
 ![https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/TopNewsHierarchy.gif](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/TopNewsHierarchy.gif)
 
+### Request Top News Item Per Package Id
+From this available hierarchy, we select the news package of interest to us, for example, Main -> World News:
+```
+myTopNewsId = jResp['data'][0].get('pages')[3].get('topNewsId')
+```
+![https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/packageId.gif](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/packageId.gif)
 ## References
 
 * The code examples referenced in this article:  
