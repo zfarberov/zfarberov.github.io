@@ -46,7 +46,7 @@ jResp = json.loads(txt);
 print(json.dumps(jResp, indent=2));
 ```
 Resulting in output:
-![https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/TopNewsHierarchy.gif](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/TopNewsHierarchy.gif)
+![https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/TopNewsHierarchy.gif](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages/blob/main/TopNewsHierarchy.gif)
 
 ## References
 
