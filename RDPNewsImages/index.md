@@ -170,6 +170,76 @@ report_id
 ```
 Resulting in:
 ![onlineReportId.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportId.gif)
+### Request Online Report
+```
+#report_id = "/OLUSTOPNEWS"
+def getReportsById(report_ir):
+    news_category_URL = "/data/news"
+    reports_endpoint_URL = "/online-reports"
+
+
+    REQUEST_URL = base_URL + news_category_URL + RDP_version + reports_endpoint_URL +  "/" + report_id
+
+    accessToken = getToken();
+    print("Requesting: ",REQUEST_URL)
+    
+    acceptValue = "application/json"
+    dResp = requests.get(REQUEST_URL, headers = {"Authorization": "Bearer " + accessToken, "Accept": acceptValue});
+    if dResp.status_code != 200:
+        print("Unable to get data. Code %s, Message: %s" % (dResp.status_code, dResp.text));
+        if dResp.status_code != 401:   # error other then token expired
+            return("") 
+        accessToken = getToken();     # token refresh on token expired
+    else:
+        print("Resource access successful")
+        return dResp.text
+    
+txt = getReportsById(report_id)
+jResp = json.loads(txt);
+print(json.dumps(jResp, indent=2));
+```
+![onlineReportInfo.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportInfo.gif)
+### Select Image Id 
+In this exmaple - first
+```
+myImageId = jResp['data'][0].get('newsItem').get('itemMeta').get('link')[0].get('remoteContent')[0].get('_residref')
+myImageId
+```
+![onlineReportImageId.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportImageId.gif)
+### Request Online Report Image 
+By passing image id, in this example - first
+```
+myImageName = 'uniqueImageName'
+def getImage(imageId):
+    news_category_URL = "/data/news"
+    image_endpoint_URL = "/images/"
+
+    REQUEST_URL = base_URL + news_category_URL + RDP_version + image_endpoint_URL + imageId
+
+    accessToken = getToken();
+    print("Requesting: ",REQUEST_URL)
+    
+    acceptValue = "image/jpeg"
+    dResp = requests.get(REQUEST_URL, headers = {"Authorization": "Bearer " + accessToken, "Accept": acceptValue});
+    if dResp.status_code != 200:
+        print("Unable to get data. Code %s, Message: %s" % (dResp.status_code, dResp.text));
+        if dResp.status_code != 401:   # error other then token expired
+            return("") 
+        accessToken = getToken();     # token refresh on token expired
+    else:
+        print("Resource access successful")
+        return dResp.content
+    
+imgContent = getImage(myImageId)
+file = open(myImageName+'.jpg', "wb")
+file.write(imgContent)
+file.close()
+
+from IPython.display import Image
+Image(filename=myImageName+'.jpg') 
+```
+We store and display the image that was obtained:
+![onlineReportImage.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportImage.gif)
 
 ## References
 
