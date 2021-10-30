@@ -96,6 +96,41 @@ myImageId = jResp2['data'][0].get('image').get('id')
 myImageId
 ```
 ![topNewsImageId.gif](https://zfarberov.github.io/RDPNewsImages/topNewsImageId.gif)
+
+And now we are ready to
+### Request Top News Image
+We request with selected Image ID, store into a file as well as display
+```
+def getTopNewsImage(imageId):
+    news_category_URL = "/data/news"
+    image_endpoint_URL = "/images/"
+
+    REQUEST_URL = base_URL + news_category_URL + RDP_version + image_endpoint_URL + imageId
+
+    accessToken = getToken();
+    print("Requesting: ",REQUEST_URL)
+    
+    acceptValue = "image/jpeg"
+    dResp = requests.get(REQUEST_URL, headers = {"Authorization": "Bearer " + accessToken, "Accept": acceptValue});
+    if dResp.status_code != 200:
+        print("Unable to get data. Code %s, Message: %s" % (dResp.status_code, dResp.text));
+        if dResp.status_code != 401:   # error other then token expired
+            return("") 
+        accessToken = getToken();     # token refresh on token expired
+    else:
+        print("Resource access successful")
+        return dResp.content
+    
+imgContent = getTopNewsImage(myImageId)
+file = open(myImageId+'.jpg', "wb")
+file.write(imgContent)
+file.close()
+
+from IPython.display import Image
+Image(filename=myImageId+'.jpg') 
+```
+![topNewsImage.gif](https://zfarberov.github.io/RDPNewsImages/topNewsImage.gif)
+
 ## References
 
 * The code examples referenced in this article:  
