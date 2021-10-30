@@ -169,6 +169,7 @@ report_id = jResp['data'][0].get('reports')[0].get('reportId')
 report_id
 ```
 Resulting in:
+
 ![onlineReportId.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportId.gif)
 ### Request Online Report
 ```
