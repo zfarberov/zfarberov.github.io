@@ -244,7 +244,7 @@ We store and display the image that was obtained:
 
 ## References
 
-* The code examples in this article hosted on GitHub in Refinitiv examples space:  
+* The complete code  from this article is available on GitHub in Refinitiv examples space:  
 [https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsTopImages)
 [https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsOnlineReportsImages](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Python.NewsOnlineReportsImages)
 * RDP News API User and Design Guide: 
