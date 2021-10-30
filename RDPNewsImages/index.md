@@ -56,7 +56,7 @@ From this available hierarchy, we select the news package of interest to us, for
 ```
 myTopNewsId = jResp['data'][0].get('pages')[3].get('topNewsId')
 ```
-![packageId.gif](https://zfarberov.github.io/RDPNewsImages/topNewsPackageId.gif)
+![newsPackageId.gif](https://zfarberov.github.io/RDPNewsImages/newsPackageId.gif)
 ## References
 
 * The code examples referenced in this article:  
