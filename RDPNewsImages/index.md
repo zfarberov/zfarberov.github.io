@@ -19,7 +19,7 @@ To interact with RDP platform we require valid RDP credentials and setup:
 3. Authenticate with RDP using credentials to obtain a valid token
 These steps are included in the companion code examples hosted on GitHub (see References section) and are described in detail in many RDP articles, for example [https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python](https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python), therefore, we ommit the detailed discussion of these steps here and next next we focus on requesting RDP images.
 
-## Request RDP Images
+## Request RDP Top News Images
 Let us first look at requesting  images that are made available with Top News
 
 ### Request Top News Hierarchy
@@ -130,6 +130,46 @@ from IPython.display import Image
 Image(filename=myImageId+'.jpg') 
 ```
 ![topNewsImage.gif](https://zfarberov.github.io/RDPNewsImages/topNewsImage.gif)
+
+## Request RDP Online Reports Images
+Next let us look how to request images that are part of online reports
+### Request Online Reports Hierarchy
+```
+def getOnlineReports():
+    news_category_URL = "/data/news"
+    reports_endpoint_URL = "/online-reports"
+
+
+    REQUEST_URL = base_URL + news_category_URL + RDP_version + reports_endpoint_URL
+
+    accessToken = getToken();
+    print("Requesting: ",REQUEST_URL)
+    
+    acceptValue = "application/json"
+    dResp = requests.get(REQUEST_URL, headers = {"Authorization": "Bearer " + accessToken, "Accept": acceptValue});
+    if dResp.status_code != 200:
+        print("Unable to get data. Code %s, Message: %s" % (dResp.status_code, dResp.text));
+        if dResp.status_code != 401:   # error other then token expired
+            return("") 
+        accessToken = getToken();     # token refresh on token expired
+    else:
+        print("Resource access successful")
+        return dResp.text
+    
+txt = getOnlineReports()
+jResp = json.loads(txt);
+print(json.dumps(jResp, indent=2));
+```
+Observe the hierarchy:
+![onlineReportsHierarchy.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportsHierarchy.gif)
+
+### Select Report Id
+```
+report_id = jResp['data'][0].get('reports')[0].get('reportId')
+report_id
+```
+Resulting in:
+![onlineReportId.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportId.gif)
 
 ## References
 
