@@ -51,12 +51,51 @@ print(json.dumps(jResp, indent=2));
 Resulting in output:
 ![TopNewsHierarchy.gif](https://zfarberov.github.io/RDPNewsImages/TopNewsHierarchy.gif)
 
-### Request Top News Item Per Package Id
-From this available hierarchy, we select the news package of interest to us, for example, Main -> World News:
+### Select Top News Package Id
+From the hierarchy, we select the news package of interest to us, for example, 
+Main -> World News:
 ```
 myTopNewsId = jResp['data'][0].get('pages')[3].get('topNewsId')
 ```
 ![newsPackageId.gif](https://zfarberov.github.io/RDPNewsImages/newsPackageId.gif)
+
+### Request Top News Item Per Package Id
+```
+def getTopNewsPerId(id):
+    news_category_URL = "/data/news"
+    topnews_endpoint_URL = "/top-news/"
+
+    REQUEST_URL = base_URL + news_category_URL + RDP_version + topnews_endpoint_URL + id
+
+    accessToken = getToken();
+    print("Requesting: ",REQUEST_URL)
+    
+    acceptValue = "application/json"
+    dResp = requests.get(REQUEST_URL, headers = {"Authorization": "Bearer " + accessToken, "Accept": acceptValue});
+    if dResp.status_code != 200:
+        print("Unable to get data. Code %s, Message: %s" % (dResp.status_code, dResp.text));
+        if dResp.status_code != 401:   # error other then token expired
+            return("") 
+        accessToken = getToken();     # token refresh on token expired
+    else:
+        print("Resource access successful")
+        return dResp.text
+    
+txt = getTopNewsPerId(myTopNewsId)
+jResp2 = json.loads(txt);
+print(json.dumps(jResp2, indent=2));
+```
+Resulting in:
+![topNewsItem.gif](https://zfarberov.github.io/RDPNewsImages/topNewsItem.gif)
+Let us look closely at top news item's "data", and observe that it contains "image" that contains "id.
+So next we
+### Select News Image ID
+In this example, we select first- [0]
+```
+myImageId = jResp2['data'][0].get('image').get('id')
+myImageId
+```
+![topNewsImageId.gif](https://zfarberov.github.io/RDPNewsImages/topNewsImageId.gif)
 ## References
 
 * The code examples referenced in this article:  
