@@ -5,7 +5,8 @@
 
 "A picture is worth a thousand words"- they say.  
 
-But be that as it may, we find that pictures or, nowdays, digital images, capture of our life.  As life is refelected in news, and images are an indelible part of news, images also are an important part of RDP news.  
+Not always, and not quite precisely, but we find that as our life is reflected in news, images are in integral part of news, make news richer, easier to absorb 
+and relate to and images also are an important part of RDP news.  
 
 Refinitiv Data Platform (RDP) provides access to a broad range of content including rich slef-described news and images that are part of news.
 
