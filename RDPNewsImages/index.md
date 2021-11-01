@@ -12,7 +12,7 @@ Refinitiv Data Platform (RDP) provides access to the broad range of content, inc
 
 Next, we are going to look at requesting images that are a part of RDP news.  Currently, RDP Top News and RDP News Reports Online are the two types of news that are made available with images.
 
-## Prepare to Access RDP News
+## Requirements and Setup to Access RDP News
 
 To interact with RDP platform we require valid RDP credentials and setup:
 1. Import required libraries and define RDP endpoint paths and constants.
