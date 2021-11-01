@@ -18,7 +18,7 @@ To interact with RDP platform we require valid RDP credentials and setup:
 1. Import required libraries and define RDP endpoint paths and constants.
 2. Load valid RDP credentials that are permissioned for RDP news access.
 3. Authenticate with RDP using credentials to obtain a valid token
-These steps are included in the companion code examples hosted on GitHub (see References section) and are described in detail in many RDP articles, for example [https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python](https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python), therefore, we ommit the detailed discussion of these steps here, and focus solely on requesting RDP images.
+These steps are included in the companion code examples hosted on GitHub (see References section) and are described in detail in many RDP articles, for example [https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python](https://developers.refinitiv.com/en/article-catalog/article/exploring-news-metadata-refinitiv-data-platform-and-python), so that we can omit what would be a redundant detailed discussion of these steps here as well, and focus solely on requesting RDP images.
 
 ## Request RDP Top News Images
 Let us first look at requesting  images that are made available with Top News
