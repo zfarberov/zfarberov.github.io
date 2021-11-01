@@ -3,7 +3,7 @@
 
 ## Introduction
 
-"A picture is worth a thousand words"- they say.  
+"A picture is worth a thousand words..."  
 
 Not always, and not so precisely, but we find that as our life is reflected in news, images are an indelible, integral part of news, making news richer, quicker to absorb 
 and easier for us to relate to.  
