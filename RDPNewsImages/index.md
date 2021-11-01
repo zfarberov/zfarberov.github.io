@@ -8,7 +8,7 @@
 Not always, and not so precisely, but we find that as our life is reflected in news, images are an indelible, integral part of news, making news richer, quicker to absorb 
 and easier for us to relate to.  
 
-Refinitiv Data Platform (RDP) provides access to a broad range of content, including rich, self-described RDP news with and images, that can be co-related to RDP news.
+Refinitiv Data Platform (RDP) provides access to the broad range of content, including rich, self-described RDP news with and images, that can be co-related to RDP news.
 
 Next, we are going to talk about requesting images that are a part of RDP news.  Currently, RDP Top News and RDP News Reports Online are the two types of news that are made available with images.
 
