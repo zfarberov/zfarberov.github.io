@@ -203,14 +203,14 @@ print(json.dumps(jResp, indent=2));
 ```
 ![onlineReportInfo.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportInfo.gif)
 ### Select Image Id 
-In this exmaple - first
+In this exmaple - first - [0]
 ```
 myImageId = jResp['data'][0].get('newsItem').get('itemMeta').get('link')[0].get('remoteContent')[0].get('_residref')
 myImageId
 ```
 ![onlineReportImageId.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportImageId.gif)
 ### Request Online Report Image 
-By passing image id, in this example - first
+By passing image id, in this example - first [0]
 ```
 myImageName = 'uniqueImageName'
 def getImage(imageId):
@@ -241,7 +241,7 @@ file.close()
 from IPython.display import Image
 Image(filename=myImageName+'.jpg') 
 ```
-We store and display the image that was obtained:
+We store and display the image that was just requested and stored:
 ![onlineReportImage.gif](https://zfarberov.github.io/RDPNewsImages/onlineReportImage.gif)
 
 ## References
